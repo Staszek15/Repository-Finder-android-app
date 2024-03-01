@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:outlineProvider="background"
+    android:layout_height="152dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/heading_repository"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        android:text="Repository:" />
+
+    <TextView
+        android:id="@+id/text_repository"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/heading_repository"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        tools:text="Repository name" />
+
+
+    <TextView
+        android:id="@+id/heading_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading_repository"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        android:text="Owner:" />
+
+    <TextView
+        android:id="@+id/text_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_repository"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/heading_owner"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        tools:text="Owner login" />
+
+
+    <TextView
+        android:id="@+id/heading_branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading_owner"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        android:text="Branch:" />
+
+    <TextView
+        android:id="@+id/text_branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_owner"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/heading_branch"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        tools:text="Branch name" />
+
+
+    <TextView
+        android:id="@+id/heading_sha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading_branch"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        android:text="SHA:" />
+
+    <TextView
+        android:id="@+id/text_sha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_branch"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/heading_sha"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        tools:text="c6592484071b9d842a95ce48614380eb08b24a79" />
+
+</RelativeLayout>
