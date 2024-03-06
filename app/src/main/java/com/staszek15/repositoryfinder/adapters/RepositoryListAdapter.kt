@@ -1,10 +1,10 @@
-package com.staszek15.bucketlist
+package com.staszek15.repositoryfinder.adapters
 
+import RepositoryItem
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.staszek15.repositoryfinder.dataclasses.RepositoryItem
 import com.staszek15.repositoryfinder.databinding.RepositoryListItemBinding
 
 class RepositoryListAdapter(private val repositoryListItems: List<RepositoryItem>):
@@ -28,10 +28,10 @@ class RepositoryListAdapter(private val repositoryListItems: List<RepositoryItem
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.repository.text = repositoryListItems[position].repository
+        holder.repository.text = repositoryListItems[position].name
         holder.owner.text = repositoryListItems[position].owner
-        holder.branch.text = repositoryListItems[position].branch
-        holder.sha.text = repositoryListItems[position].sha
+        holder.branch.text = repositoryListItems[position].default_branch
+        holder.sha.text = repositoryListItems[position].topics.toString()
     }
 
 }

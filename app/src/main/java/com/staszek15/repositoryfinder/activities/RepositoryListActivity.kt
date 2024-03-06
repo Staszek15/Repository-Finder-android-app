@@ -1,12 +1,13 @@
 package com.staszek15.repositoryfinder.activities
 
+import RepositoryItem
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.staszek15.bucketlist.RepositoryListAdapter
-import com.staszek15.repositoryfinder.dataclasses.RepositoryItem
+import com.staszek15.repositoryfinder.adapters.RepositoryListAdapter
 import com.staszek15.repositoryfinder.databinding.ActivityRepositoryListBinding
+import main
 
 class RepositoryListActivity : AppCompatActivity() {
 
@@ -18,6 +19,7 @@ class RepositoryListActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         createRecyclerView()
+        main()
     }
 
     private fun createRecyclerView() {
@@ -29,8 +31,8 @@ class RepositoryListActivity : AppCompatActivity() {
 
     private fun createBucketList(): List<RepositoryItem> {
         return buildList {
-            add(RepositoryItem("Sugar Alarm", "Staszek15", "main", "09c231311gd123"))
-            add(RepositoryItem("Bucket List", "Staszek15", "main-kt", "01h231888gd123"))
+            add(RepositoryItem("Sugar Alarm", "Staszek15", "main", listOf("android","kotlin")))
+            add(RepositoryItem("Bucket List", "Staszek15", "main-kt", listOf("mobile","bucket list","kotlin")))
         }
     }
 }

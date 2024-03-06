@@ -1,8 +1,6 @@
-package com.staszek15.repositoryfinder.dataclasses
-
 data class RepositoryItem(
-    val repository: String,
+    val name: String,
     val owner: String,
-    val branch: String,
-    val sha: String
+    var default_branch: String,
+    var topics: List<String>
 )

@@ -4,7 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.staszek15.repositoryfinder.databinding.ActivityMainBinding
+import com.staszek15.repositoryfinder.databinding.ActivityMainBinding import getBranches
+import main
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         this.supportActionBar?.hide()
 
         setupClickListeners()
+
     }
 
 

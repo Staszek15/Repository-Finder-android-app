@@ -5,5 +5,5 @@ import retrofit2.http.Url
 
 interface ApiInterface {
     @GET
-    fun getData(@Url url: String, @Header("Accept") acceptHeader: String = "application/json"): Call<List<DataItem>>
+    fun getData(@Url url: String, @Header("Accept") acceptHeader: String = "application/json"): Call<List<RepositoryItem>>
 }

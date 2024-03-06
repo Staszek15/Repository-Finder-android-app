@@ -7,7 +7,7 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
-suspend fun getBranches(url: String): List<BranchItem> = suspendCoroutine { continuation ->
+fun getBranches(url: String) {
     val branchRetrofit = Retrofit.Builder()
         .baseUrl("https://api.github.com/")
         .addConverterFactory(GsonConverterFactory.create())
@@ -25,17 +25,14 @@ suspend fun getBranches(url: String): List<BranchItem> = suspendCoroutine { cont
                         println("Branch name: ${branch.name}")
                         println("Last commit SHA: ${branch.commit["sha"]}")
                     }
-                    continuation.resume(it)
-                } ?: run {
-                    continuation.resumeWithException(NullPointerException("Branch response is null"))
                 }
             } else {
-                continuation.resumeWithException(Exception("Error retrieving branches"))
+                println("Error retrieving branches")
             }
         }
 
         override fun onFailure(call: Call<List<BranchItem>>, t: Throwable) {
-            continuation.resumeWithException(t)
+            t.printStackTrace()
         }
     })
 }
